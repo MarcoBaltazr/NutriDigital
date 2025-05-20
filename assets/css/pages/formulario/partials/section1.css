@@ -52,8 +52,8 @@ p {
 }
 
 .input-field {
-    position: relative;
-    margin-bottom: 12px;
+  position: relative;
+  margin-bottom: 12px;
 }
 
 select {
@@ -91,7 +91,7 @@ input::placeholder {
   font-size: 16px;
 }
 
-button{
+button {
   width: 100%;
   padding: 11px;
   border-radius: 16px;
@@ -104,6 +104,6 @@ button{
   transition: backgorund-color 0.3s ease;
 }
 
-button:hover{
-  background-color: var(--botao-hover)
+button:hover {
+  background-color: var(--botao-hover);
 }

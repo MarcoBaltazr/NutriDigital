@@ -61,38 +61,38 @@ p {
   padding-bottom: 23px;
 }
 
-.input-field{
-    position: relative;
-    margin-bottom: 12px;
+.input-field {
+  position: relative;
+  margin-bottom: 12px;
 }
 
 .input-field input {
-    width: 100%;
-    padding: 12px 35px 12px 15px;
-    border-radius: 16px;
-    border: none;
-    background-color: var(--branco-fumaca);
-    color: var(--cinza-texto);
-    font-size: 16px;
+  width: 100%;
+  padding: 12px 35px 12px 15px;
+  border-radius: 16px;
+  border: none;
+  background-color: var(--branco-fumaca);
+  color: var(--cinza-texto);
+  font-size: 16px;
 }
 
 .input-field img {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
 }
 
-.input-field img#togglePassword{
-    cursor: pointer;
+.input-field img#togglePassword {
+  cursor: pointer;
 }
 
-.input-field img#toggleConfirmPassword{
-    cursor: pointer;
+.input-field img#toggleConfirmPassword {
+  cursor: pointer;
 }
 
-button{
+button {
   width: 100%;
   padding: 11px;
   border-radius: 16px;
@@ -106,23 +106,23 @@ button{
   margin-top: 16px;
 }
 
-button:hover{
-  background-color: var(--botao-hover)
+button:hover {
+  background-color: var(--botao-hover);
 }
 
-.ja-cadastrado{
+.ja-cadastrado {
   color: var(--cinza-texto);
   font-family: fontSemibold;
   font-size: 12px;
 }
 
-.ja-cadastrado a{
+.ja-cadastrado a {
   color: var(--cinza-texto);
   font-family: fontBold;
   font-size: 12px;
 }
 
-.ja-cadastrado a:hover{
+.ja-cadastrado a:hover {
   text-decoration: underline;
   color: var(--cinza-texto);
 }

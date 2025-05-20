@@ -12,7 +12,7 @@
         <div class="formulario-card">
             <h1>Avaliação</h1>
             <p>Responda as pergutas abaixo para ter acesso a sua dieta personalizada</p>
-            <form>
+            <form action="/assets/dashboard.html" method="GET">
                 <div class="input-field">
                     <label for="sexo"></label>
                     <select id="sexo" name="sexo" required>
@@ -23,15 +23,15 @@
                 </div>
                 <div class="input-field">
                     <label for="idade"></label>
-                    <input type="number" id="idade" name="idade" placeholder="Qual a sua idade?" required>
+                    <input type="number" id="idade" name="idade" min="1" placeholder="Qual a sua idade?" required>
                 </div>
                 <div class="input-field">
                     <label for="peso"></label>
-                    <input type="number" id="peso" name="peso" step="0.1" placeholder="Quanto você pesa?" required>
+                    <input type="number" id="peso" name="peso" step="0.1" min="1" placeholder="Quanto você pesa?" required>
                 </div>
                 <div class="input-field">
                     <label for="altura"></label>
-                    <input type="number" id="altura" name="altura" step="0.1" placeholder="Qual a sua altura em centímetros?" required>
+                    <input type="number" id="altura" name="altura" step="0.1" min="1" placeholder="Qual a sua altura em centímetros?" required>
                 </div>
                 <div class="input-field">
                     <label for="atividade-fisica"></label>

@@ -1,0 +1,127 @@
+body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/image/gradiente.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar-menu {
+  height: 100%;
+  padding-left: 44px;
+  width: 400px;
+}
+
+.logo {
+  margin-top: 32px;
+  margin-left: 116px;
+  justify-content: center;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px;
+}
+
+.boas-vindas {
+  margin-top: 24px;
+  text-align: center;
+  font-family: fontBold;
+  color: var(--preto);
+  font-size: 26px;
+}
+
+.sair {
+  color: var(--preto);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: right;
+  text-decoration: underline;
+  font-family: fontRegular;
+  font-size: 16px;
+}
+.informacoes {
+  height: 223px;
+  width: 340px;
+  background-color: var(--verde-back);
+  border-radius: 16px;
+  border: 1px solid var(--preto);
+  margin-bottom: 28px;
+}
+
+.informacoes h1 {
+  font-family: fontBold;
+  color: var(--preto);
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  font-size: 26px;
+}
+.informacoes p {
+  font-family: fontBold;
+  color: var(--preto);
+  padding-left: 16px;
+  padding-bottom: 18px;
+  font-size: 22px;
+}
+
+.objetivo {
+  height: 60px;
+  width: 340px;
+  background-color: var(--verde-back);
+  border-radius: 16px;
+  border: 1px solid var(--preto);
+  margin-bottom: 28px;
+}
+
+.objetivo p {
+  font-family: fontBold;
+  color: var(--preto);
+  text-align: center;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.box-grafico {
+  height: 342px;
+  width: 340px;
+  background-color: var(--verde-back);
+  border-radius: 16px;
+  border: 1px solid var(--preto);
+  margin-bottom: 28px;
+}
+
+.box-grafico p {
+  font-family: fontBold;
+  color: var(--preto);
+  text-align: center;
+  font-size: 22px;
+  padding-top: 18px;
+}
+
+.box-grafico #grafico-evolucao{
+    width: 100%;
+    height: 90%;
+}
+
+button {
+  width: 340px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: var(--laranja-botao);
+  color: var(--branco-fumaca);
+  font-size: 20px;
+  font-family: fontBold;
+  cursor: pointer;
+  transition: backgorund-color 0.3s ease;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: var(--botao-hover);
+}
+
