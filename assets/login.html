@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
-    <link rel="stylesheet" href="/assets/css/pages/login/login.css">
+    <link rel="stylesheet" href="css/pages/login/login.css">
 </head>
 <body>
-    <header class="logo"><img src="/assets/image/logo.svg" alt="logo-nutriDigital"></header>
+    <header class="logo"><img src="image/logo.svg" alt="logo-nutriDigital"></header>
     <section class ="login-container">
         <div class="login-card">
             <div class="icon">
@@ -16,26 +16,24 @@
             <h1>Login com e-mail</h1>
             <p>Coloque seu email e senha para ter acesso ao seu plano alimentar detalhado</p>
 
-            <form>
+            <form action="index.html" method="GET">
                 <div class="input-field">
                     <input type="email" placeholder="E-mail" required>
                 </div>
                 <div class="input-field">
                     <input type="password" id="password" placeholder="Senha" required>
-                    <img src="/assets/image/eye-off.svg" alt="olho-senha" id="togglePassword">
+                    <img src="image/eye-off.svg" alt="olho-senha" id="togglePassword">
                 </div>
 
                 <div class="options">
                     <a href="#">Esqueci a senha</a>
                 </div>
-                <a href="/assets/formulario.html">
-                    <button type="button">Login</button>
-                </a>
+                    <button type="submit">Login</button>
             </form>
 
-            <p class="texto-registro">Ainda não é cadastrado? <a href="/assets/cadastro.html">Criar conta</a></p>
+            <p class="texto-registro">Ainda não é cadastrado? <a href="cadastro.html">Criar conta</a></p>
         </div>
     </section>
-<script src="/assets/js/olho-magico.js"></script>
+<script src="js/olho-magico.js"></script>
 </body>
 </html>

@@ -4,38 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
-    <link rel="stylesheet" href="/assets/css/pages/cadastro/cadastro.css">
+    <link rel="stylesheet" href="css/pages/cadastro/cadastro.css">
 </head>
 <body>
     <header class="logo">
-        <img src="/assets/image/logo.svg" alt="logo-nutriDigital">
+        <img src="image/logo.svg" alt="logo-nutriDigital">
     </header>
     <section class="cadastro-container">
         <div class="cadastro-card">
             <div class="icon">
-                <img src="/assets/image/log-in.svg" alt="login-icon">
+                <img src="image/log-in.svg" alt="login-icon">
             </div>
             <h1>Cadastre-se</h1>
             <p>Crie sua conta para receber a sua dieta personalizada</p>
-            <form>
+            <form action="index.html" method="GET">
                 <div class="input-field">
                     <input type="email" placeholder="Seu melhor e-mail" required>
                 </div>
                 <div class="input-field">
                     <input type="password" id="password" placeholder="Digite sua senha" required>
-                    <img src="/assets/image/eye-off.svg" alt="olho-senha" id="togglePassword">
+                    <img src="image/eye-off.svg" alt="olho-senha" id="togglePassword">
                 </div>
                 <div class="input-field">
                     <input type="password" id="confirmPassword" placeholder="Repita sua senha" required>
-                    <img src="/assets/image/eye-off.svg" alt="olho-senha" id="toggleConfirmPassword">
+                    <img src="image/eye-off.svg" alt="olho-senha" id="toggleConfirmPassword">
                 </div>
-                <a href="/assets/formulario.html">
-                    <button type="button">Cadastre-se</button>
-                </a>
+                    <button type="submit">Cadastre-se</button>
             </form>
-            <p class="ja-cadastrado">Já possui cadastro? <a href="/assets/login.html">Fazer login</a></p>
+            <p class="ja-cadastrado">Já possui cadastro? <a href="login.html">Fazer login</a></p>
         </div>
     </section>
-    <script src="/assets/js/olho-magico.js"></script>
+    <script src="js/olho-magico.js"></script>
 </body>
 </html>
