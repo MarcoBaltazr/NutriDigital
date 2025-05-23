@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/assets/css/pages/formulario/formulario.css">
+</head>
+<body>
+    <header class="logo"><img src="/assets/image/logo.svg" alt="logo-nutriDigital"></header>
+    <section class="container-formulario">
+        <div class="formulario-card">
+            <h1>Avaliação</h1>
+            <p>Responda as pergutas abaixo para ter acesso a sua dieta personalizada</p>
+            <form action="cardapio.html" method="GET">
+                <div class="input-field">
+                    <label for="sexo"></label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="" disabled selected>Qual o seu sexo?</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="idade"></label>
+                    <input type="number" id="idade" name="idade" min="1" placeholder="Qual a sua idade?" required>
+                </div>
+                <div class="input-field">
+                    <label for="peso"></label>
+                    <input type="number" id="peso" name="peso" step="0.1" min="1" placeholder="Quanto você pesa?" required>
+                </div>
+                <div class="input-field">
+                    <label for="altura"></label>
+                    <input type="number" id="altura" name="altura" step="0.1" min="1" placeholder="Qual a sua altura em centímetros?" required>
+                </div>
+                <div class="input-field">
+                    <label for="atividade-fisica"></label>
+                    <select name="atividade-fisica" id="atividade-fisica" required>
+                        <option value="" disabled selected>Nível de atividade física diário?</option>
+                        <option value="1.2">Sedentário</option>
+                        <option value="1.375">Levemente ativo</option>
+                        <option value="1.55">Moderadamente ativo</option>
+                        <option value="1.725">Muito ativo</option>
+                        <option value="1.9">Extremamente ativo</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="objetivo"></label>
+                    <select name="objetivo" id="objetivo" required>
+                        <option value="" disabled selected>Qual o seu objetivo?</option>
+                        <option value="perder-peso">Perder peso</option>
+                        <option value="manter-peso">Manter peso</option>
+                        <option value="ganhar-peso">Ganho de massa muscular</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="renda"></label>
+                    <select name="renda" id="renda" required>
+                        <option value="" disabled selected>Renda mensal para alimentação</option>
+                        <option value="1">Até R$ 350,00</option>
+                        <option value="2">Entre R$ 350,01 e R$ 800,00</option>
+                        <option value="3">Entre R$ 800,01 e R$ 1.500,00</option>
+                        <option value="4">Entre R$ 1.500,01 e R$ 3.000,00</option>
+                        <option value="5">Acima de R$ 3.000,01</option>
+                    </select>
+                </div>
+                <button type="submit">Gerar dieta</button>
+            </form>
+
+
+        </div>
+    </section>
+    
+</body>
+</html>

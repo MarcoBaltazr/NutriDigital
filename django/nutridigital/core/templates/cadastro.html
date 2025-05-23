@@ -1,39 +1,47 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
-    <link rel="stylesheet" href="css/pages/cadastro/cadastro.css">
+    <link rel="stylesheet" href="{% static 'assets/css/global/global.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pages/cadastro/partials/section1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pages/cadastro/cadastro.css' %}">
 </head>
 <body>
     <header class="logo">
-        <img src="image/logo.svg" alt="logo-nutriDigital">
+        <img src="{% static 'assets/image/logo.svg' %}" alt="logo-nutriDigital">
     </header>
+
     <section class="cadastro-container">
         <div class="cadastro-card">
             <div class="icon">
-                <img src="image/log-in.svg" alt="login-icon">
+                <img src="{% static 'assets/image/log-in.svg' %}" alt="login-icon">
             </div>
             <h1>Cadastre-se</h1>
             <p>Crie sua conta para receber a sua dieta personalizada</p>
-            <form action="cardapio.html" method="GET">
+
+            <form action="{% url 'formulario' %}" method="GET">
                 <div class="input-field">
                     <input type="email" placeholder="Seu melhor e-mail" required>
                 </div>
                 <div class="input-field">
                     <input type="password" id="password" placeholder="Digite sua senha" required>
-                    <img src="image/eye-off.svg" alt="olho-senha" id="togglePassword">
+                    <img src="{% static 'assets/image/eye-off.svg' %}" alt="olho-senha" id="togglePassword">
                 </div>
                 <div class="input-field">
                     <input type="password" id="confirmPassword" placeholder="Repita sua senha" required>
-                    <img src="image/eye-off.svg" alt="olho-senha" id="toggleConfirmPassword">
+                    <img src="{% static 'assets/image/eye-off.svg' %}" alt="olho-senha" id="toggleConfirmPassword">
                 </div>
-                    <button type="submit">Cadastre-se</button>
+                <button type="submit">Cadastre-se</button>
             </form>
-            <p class="ja-cadastrado">Já possui cadastro? <a href="login.html">Fazer login</a></p>
+
+            <p class="ja-cadastrado">Já possui cadastro? <a href="{% url 'login' %}">Fazer login</a></p>
         </div>
     </section>
-    <script src="js/olho-magico.js"></script>
+
+    <script src="{% static 'assets/js/olho-magico.js' %}"></script>
 </body>
 </html>

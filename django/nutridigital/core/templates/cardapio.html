@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'assets/css/global/global.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pages/dashboard/partials/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pages/dashboard/partials/cardapio.css' %}">
+</head>
+<body>
+    <aside class="sidebar-menu">
+        <div class="logo">
+            <img src="{% static 'assets/image/logo.svg' %}" alt="logo-nutriDigital"> 
+        </div>
+        <h1 class="boas-vindas">Olá, Marco Baltazar</h1>
+        <a href="{% url 'login' %}" class="sair">Sair</a>
+        <div class="informacoes">
+            <h1>Informações</h1>
+            <p>Peso: 90kg</p>
+            <p>Altura: 1.76</p>
+            <p>idade: 24 anos</p>
+        </div>
+        <div class="objetivo">
+            <p>Objetivo: Ganho de massa</p>
+        </div>
+        <div class="box-grafico">
+            <div class="grafico">
+                <div class="titulo-grafico">
+                    <p>Evolução</p>
+                </div>
+                <div id="grafico-evolucao"></div>
+            </div>
+        </div>
+        <a href="{% url 'formulario' %}">
+            <button type="submit">Refazer avaliação</button>
+        </a>
+    </aside>
+    <main class="cardapio">
+        <div class="cafe-manha">
+            <h1>Café da manhã:</h1>
+            <ul>
+                <li>Duas fatias de pão de forma ou Um pão frances</li>
+                <li>Três ovos mexidos</li>
+                <li>Uma fruta</li>
+                <li>Dois comprimidos de omega 3</li>
+                <li>5 gramas de creatina</li>
+                <li>Café sem açucar (opcional)</li>
+            </ul>
+        </div>
+        <div class="almoco">
+            <h1>Almoço:</h1>
+            <ul>
+                <li>200 gramas de arroz (cerca de 10 colheres de sopa) ou 300 gramas de batata cozida (duas batatas médias) </li>
+                <li>100 gramas de feijão (uma concha) </li>
+                <li>180 gramas de frango grelhado (dois filés médios)</li>
+                <li>salada a vontade (vinagre, sal, limão e pimenta opcionais) (Não usar azeite)</li>
+            </ul>
+        </div>
+        <div class="cafe-tarde">
+            <h1>Café da tarde</h1>
+            <ul>
+                <li>Um pote de iogurte natural com 1 scoop de whey e uma fruta</li>
+                <p>ou</p>
+                <li>Um pão francês com dois ovos e um shake com um scoop de whey protein e uma banana</li>
+            </ul>
+        </div>
+        <div class="jantar">
+            <h1>Jantar</h1>
+            <ul>
+                <li>Hamburguer caseiro: um pão de hamburguer ou pão francês, dois hamburgueres de patinho com 100 gramas cada (uma bolinha média), uma fatia de queijo mussarela, (tomate, alface, picles, cebola, rúcula, ketchup e mostarda opcionais)</li>
+                <p>ou</p>
+                <li>150 gramas de arroz (cerca de 7 a 8 colheres de sopa) ou 100 gramas de maipim cozido (um aipim médio), 200 gramas de patinho moído (cerca de 10 colheres de sopa), queijo parmesão por cima (opcional)</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

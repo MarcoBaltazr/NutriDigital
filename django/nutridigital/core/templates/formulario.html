@@ -1,18 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <link rel="stylesheet" href="./css/pages/formulario/formulario.css">
+    <link rel="stylesheet" href="{% static 'assets/css/global/global.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/pages/formulario/partials/section1.css' %}">
 </head>
 <body>
-    <header class="logo"><img src="./image/logo.svg" alt="logo-nutriDigital"></header>
+    <header class="logo">
+        <img src="{% static 'assets/image/logo.svg' %}" alt="logo-nutriDigital">
+    </header>
     <section class="container-formulario">
         <div class="formulario-card">
             <h1>Avaliação</h1>
             <p>Responda as pergutas abaixo para ter acesso a sua dieta personalizada</p>
-            <form action="/assets/cardapio.html" method="GET">
+            <form action="{% url 'cardapio' %}" method="GET">
                 <div class="input-field">
                     <label for="sexo"></label>
                     <select id="sexo" name="sexo" required>
@@ -27,7 +32,7 @@
                 </div>
                 <div class="input-field">
                     <label for="peso"></label>
-                    <input type="number" id="peso" name="peso" step="0.1" min="1" placeholder="Quanto você pesa?" required>
+                    <input type="number" id="peso" name="peso" step="0.1" min="1" max="120" placeholder="Quanto você pesa?" required>
                 </div>
                 <div class="input-field">
                     <label for="altura"></label>

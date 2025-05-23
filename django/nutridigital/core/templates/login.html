@@ -1,39 +1,45 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
-    <link rel="stylesheet" href="./css/pages/login/login.css">
+    <link rel="stylesheet" href="{% static 'assets/css/pages/login/login.css' %}">
 </head>
 <body>
-    <header class="logo"><img src="./image/logo.svg" alt="logo-nutriDigital"></header>
-    <section class ="login-container">
+    <header class="logo">
+        <img src="{% static 'assets/image/logo.svg' %}" alt="logo-nutriDigital">
+    </header>
+
+    <section class="login-container">
         <div class="login-card">
             <div class="icon">
-                <img src="./image/log-in.svg" alt="login-icon">
+                <img src="{% static 'assets/image/log-in.svg' %}" alt="login-icon">
             </div>
             <h1>Login com e-mail</h1>
             <p>Coloque seu email e senha para ter acesso ao seu plano alimentar detalhado</p>
 
-            <form action="/assets/cardapio.html" method="GET">
+            <form action="{% url 'cardapio' %}" method="GET">
                 <div class="input-field">
                     <input type="email" placeholder="E-mail" required>
                 </div>
                 <div class="input-field">
                     <input type="password" id="password" placeholder="Senha" required>
-                    <img src="./image/eye-off.svg" alt="olho-senha" id="togglePassword">
+                    <img src="{% static 'assets/image/eye-off.svg' %}" alt="olho-senha" id="togglePassword">
                 </div>
 
                 <div class="options">
                     <a href="#">Esqueci a senha</a>
                 </div>
-                    <button type="submit">Login</button>
+                <button type="submit">Login</button>
             </form>
 
-            <p class="texto-registro">Ainda não é cadastrado? <a href="./cadastro.html">Criar conta</a></p>
+            <p class="texto-registro">Ainda não é cadastrado? <a href="{% url 'cadastro' %}">Criar conta</a></p>
         </div>
     </section>
-<script src="./js/olho-magico.js"></script>
+
+    <script src="{% static 'assets/js/olho-magico.js' %}"></script>
 </body>
 </html>
