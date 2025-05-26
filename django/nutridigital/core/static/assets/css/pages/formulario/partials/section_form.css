@@ -48,7 +48,7 @@ p {
   text-align: center;
   width: 400px;
   color: var(--preto);
-  height: 580px;
+  height: 620px;
 }
 
 .input-field {
@@ -107,3 +107,4 @@ button {
 button:hover {
   background-color: var(--botao-hover);
 }
+
