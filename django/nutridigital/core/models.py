@@ -1,40 +1,47 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
-sexo_user = [
-    ('M', 'Masculino'),
-    ('F', 'Feminino'),
-]
+class PerfilUsuario(models.Model):
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
 
-atv_fisica = [
-    ('1', 'Sedentário'),
-    ('2', 'Levemente ativo'),
-    ('3', 'Moderadamente ativo'),
-    ('4', 'Muito ativo'),
-    ('5', 'Extremamente ativo'),
-]
+    SEXO_CHOICES = [
+        ('masculino', 'Masculino'),
+        ('feminino', 'Feminino'),
+    ]
 
-objetivo_user = [
-    ('perda', 'Perder peso'),
-    ('manter', 'Manter peso'),
-    ('ganho', 'Ganho de massa muscular'),
-]
+    OBJETIVO_CHOICES = [
+        ('perder-peso', 'Perder Peso'),
+        ('manter-peso', 'Manter Peso'),
+        ('ganhar-peso', 'Ganhar Massa Muscular'),
+    ]
 
-renda_disp = [
-    ('0-300', 'Até R$ 350,00'),
-    ('350-800', 'Entre R$ 350,01 e R$ 800,00'),
-    ('800-1500', 'Entre R$ 800,01 e R$ 1.500,00'),
-    ('1500-3000', 'Entre R$ 1.500,01 e R$ 3.000,00'),
-    ('3000+', 'Acima de R$ 3.000,01'),
-]
+    sexo = models.CharField(max_length=10, choices=SEXO_CHOICES)
+    idade = models.PositiveIntegerField()
+    peso_kg = models.DecimalField(max_digits=5, decimal_places=2)
+    altura_cm = models.PositiveIntegerField()
+    nivel_atividade = models.DecimalField(max_digits=4, decimal_places=3) 
+    objetivo = models.CharField(max_length=20, choices=OBJETIVO_CHOICES)
+    faixa_renda = models.PositiveIntegerField(default=1) 
 
-class Questionario(models.Model):
-    nome = models.CharField(max_length=50)
-    sexo = models.CharField(choices=sexo_user)
-    idade = models.IntegerField()
-    peso = models.FloatField()
-    altura = models.FloatField()
-    atv = models.CharField(choices=atv_fisica)
-    objetivo = models.CharField(choices=objetivo_user)
-    renda = models.CharField(choices=renda_disp)
+    def __str__(self):
+        return self.usuario.username
 
+class Alimento(models.Model):
+    nome = models.CharField(max_length=100, unique=True)
+    custo_aproximado = models.DecimalField(max_digits=6, decimal_places=2, default=10.00)
+    calorias = models.PositiveIntegerField()
+    proteinas = models.DecimalField(max_digits=5, decimal_places=2)
+    carboidratos = models.DecimalField(max_digits=5, decimal_places=2)
+    gorduras = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return self.nome
+
+class Cardapio(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    data_criacao = models.DateField(auto_now_add=True)
+    alimentos = models.ManyToManyField(Alimento)
+    calorias_totais = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"Cardápio de {self.usuario.username} em {self.data_criacao}"
